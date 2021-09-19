@@ -27,7 +27,7 @@ impl QForm {
         debug_assert!(discriminant % 8 == 1.into(), "discriminator should be 7 mod 8");
         let a = BigInt::from(2u64);
         let b = BigInt::from(1u32);
-        let c = -(discriminant - 1u64) / (&a << 2);
+        let c = -(discriminant - 1u64) / 8;
         return QForm { a, b, c };
     }
 }
